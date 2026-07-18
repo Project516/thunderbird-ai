@@ -13,6 +13,12 @@ Download the .xpi from the [releases page](https://github.com/Project516/thunder
 
 To hack on it instead, open Tools > Developer Tools > Debug Add-ons, click "Load Temporary Add-on", and pick `manifest.json`. Temporary add-ons unload when Thunderbird closes. Build the .xpi with `./build.sh`.
 
+If Thunderbird is installed as a flatpak, grant it read access to your checkout first, then restart it:
+
+    flatpak override --user --filesystem=$PWD:ro org.mozilla.thunderbird_esr
+
+Without this the sandbox cannot read the extension files, which shows up as blank pages and stale code after edits.
+
 ## Checking it works
 
 - Write a draft with a typo and the words "see attached", but no attachment. AI review should flag both.
