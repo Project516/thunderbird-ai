@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+  <h1>AI review</h1>
+  <div class="actions">
+    <button id="review" class="primary">Review draft</button>
+    <button id="improve">Suggest rewrite</button>
+  </div>
+  <p id="status"></p>
+  <div id="output" hidden></div>
+  <button id="apply" hidden>Replace draft with rewrite</button>
+  <script src="api.js"></script>
+  <script src="compose.js"></script>
+</body>
+</html>

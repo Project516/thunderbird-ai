@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Mail AI Assistant",
+  "version": "0.1.0",
+  "description": "Review drafts before you send, summarize messages, and draft replies with any OpenAI-compatible model (OpenRouter, Ollama, llama.cpp).",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mail-ai-assistant@project516.dev",
+      "strict_min_version": "115.0"
+    }
+  },
+  "permissions": [
+    "compose",
+    "messagesRead",
+    "storage",
+    "<all_urls>"
+  ],
+  "compose_action": {
+    "default_title": "AI review",
+    "default_popup": "compose.html"
+  },
+  "message_display_action": {
+    "default_title": "AI summarize",
+    "default_popup": "message.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}
