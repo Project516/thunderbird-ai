@@ -23,7 +23,7 @@ Without this the sandbox cannot read the extension files, which shows up as blan
 
 - Write a draft with a typo and the words "see attached", but no attachment. AI review should flag both.
 - Open any message and click Summarize. You should get a few bullets. Draft reply should open a reply window with a usable body.
-- Put a wrong API key in the settings. The popup should show a readable error instead of hanging.
+- Put a wrong API key in the settings. The popup should show a readable error instead of hanging. You can also click "Test connection" on the settings page to check your endpoint, key, and model before opening any email.
 
 ## Privacy
 

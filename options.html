@@ -17,8 +17,12 @@
   <input id="model" type="text" placeholder="openrouter/free">
   <p class="hint"><code>openrouter/free</code> auto-routes to a free model; IDs ending in <code>:free</code> also cost nothing. For Ollama use the local model name, e.g. <code>llama3.2</code>.</p>
 
-  <p><button id="save" class="primary">Save</button></p>
+  <p>
+    <button id="save" class="primary">Save</button>
+    <button id="test">Test connection</button>
+  </p>
   <p id="status" role="status"></p>
+  <p id="test-status" role="status"></p>
 
   <script src="api.js"></script>
   <script src="options.js"></script>
