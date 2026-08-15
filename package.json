@@ -1,0 +1,1 @@
+{"description":"Thunderbird add-on for AI draft review, message summaries, and reply drafting.","engines":{"node":">=20"},"license":"AGPL-3.0-or-later","name":"thunderbird-ai","private":true,"scripts":{"test":"node --test"},"version":"0.1.0"}

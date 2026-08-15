@@ -95,3 +95,27 @@ function onAction(button, statusEl, outputEl, buttons, task) {
     }
   });
 }
+
+// Validate an OpenAI-compatible endpoint URL the user typed into Settings.
+// Rejects the common mistake the README calls out: a bare host with no scheme,
+// which fetch() would reject with a confusing "Could not reach" error at chat
+// time. Returns a human-readable reason, or "" when the URL looks usable.
+function baseUrlProblem(baseUrl) {
+  const url = (baseUrl || "").trim();
+  if (!url) return "";
+  if (!/^https?:\/\//i.test(url)) {
+    return "Endpoint must start with http:// or https://";
+  }
+  try {
+    new URL(url);
+  } catch (e) {
+    return "Endpoint is not a valid URL.";
+  }
+  return "";
+}
+
+// Expose the pure helpers for the Node test runner. `module` is undefined in a
+// Thunderbird popup, so this guard never runs there.
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { partText, messageText, htmlToText, baseUrlProblem };
+}
